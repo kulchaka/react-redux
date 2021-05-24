@@ -13,7 +13,7 @@ function App() {
         <div className="row">
           <div className="col">
             <h2>Synchronous posts</h2>
-            <Posts posts={[1, 2, 3]}/>
+            <Posts />
           </div>
           <div className="col">
             <h2>Asynchronous posts</h2>
