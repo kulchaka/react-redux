@@ -1,16 +1,15 @@
 import Post from './Post'
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPosts} from "../redux/actions";
-import SpinnerLoader from "./spinnerLoader";
+import SpinnerLoader from "./SpinnerLoader";
 
 const FetchedPosts = () => {
   const dispatch = useDispatch()
   const posts = useSelector(state => state.posts.fetchedPosts)
   const loading = useSelector(state => state.loading.loading)
-  console.log(loading)
 
   if (loading) {
-    return <SpinnerLoader />
+    return <SpinnerLoader/>
   }
 
   if (!posts.length) {
